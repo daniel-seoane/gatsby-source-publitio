@@ -1,0 +1,25 @@
+{
+  "name": "gatsby-source-publitio",
+  "version": "1.0.0",
+  "description": "Source plugin for getting files from your Publitio account",
+  "author": "Daniel Seoane <hello@dseoane.com>",
+  "homepage": "https://github.com/daniel-seoane/gatsby-source-publitio",
+  "repository": "https://github.com/daniel-seoane/gatsby-source-publitio",
+  "bugs": {
+    "url": "https://github.com/daniel-seoane/gatsby-source-publitio/issues"
+  },
+  "main": "index.js",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "publitio"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gatsby-source-filesystem": "^2.1.48",
+    "publitio_js_sdk": "^1.1.1"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.19.27"
+  }
+}
