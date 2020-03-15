@@ -8,8 +8,8 @@ const defaultOptions = {
   filter_extension: "all",
   filter_type: "all",
   filter_ad: "all",
-  tags: "all",
-  folder: "/"
+  tags: "",
+  folder: ""
 };
 
 exports.sourceNodes = async (

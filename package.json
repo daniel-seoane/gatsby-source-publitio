@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-publitio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Source plugin for getting files from your Publitio account",
   "author": "Daniel Seoane <hello@dseoane.com>",
   "homepage": "https://github.com/daniel-seoane/gatsby-source-publitio",

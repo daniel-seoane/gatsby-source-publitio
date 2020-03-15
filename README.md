@@ -38,8 +38,8 @@ module.exports = {
 
 ### Required
 
-| Key         | Description                                                        |
-| ----------- | ------------------------------------------------------------------ |
+| Key          | Description                                                        |
+| ------------ | ------------------------------------------------------------------ |
 | `api_key`    | Get it from your [Publitio Dashboard](https://publit.io/dashboard) |
 | `api_secret` | Get it from your [Publitio Dashboard](https://publit.io/dashboard) |
 
@@ -53,7 +53,7 @@ module.exports = {
 | `filter_extension` | `all`         | Specifies which files should be returned based on their extension. For a full list of extensions see [supported extensions](https://publit.io/docs/#create-file)                                                                                             |
 | `filter_type`      | `all`         | Specifies which files should be returned based on their type. Supported values are `all`, `image`, `video` and `audio`                                                                                                                                       |
 | `filter_ad`        | `all`         | Specifies which files should be returned based on their option_ad status. Supported values are `all`, `enabled`, `disabled` and `new`                                                                                                                        |
-| `tags`             | `all`         | Search query tags separated by + signs. You can append :any to list files which have any of the tags, or :all to list only files which have all of the tags. For example, use `dogs+cats:any` to select all files which either have the dogs or the cats tag |
+| `tags`             |               | Search query tags separated by + signs. You can append :any to list files which have any of the tags, or :all to list only files which have all of the tags. For example, use `dogs+cats:any` to select all files which either have the dogs or the cats tag |
 | `folder`           |               | Folder ID or Path to list files from. Default lists all files. Use / to list top (root) folder files                                                                                                                                                         |
 
 
