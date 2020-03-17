@@ -13,7 +13,7 @@ const defaultOptions = {
 };
 
 exports.sourceNodes = async (
-  { actions: { createNode }, store, cache, createNodeId, createContentDigest },
+  { actions: { createNode }, store, cache, createNodeId, createContentDigest, reporter },
   pluginOptions
 ) => {
   const { api_key, api_secret, ...options } = {
@@ -21,12 +21,20 @@ exports.sourceNodes = async (
     ...pluginOptions
   };
 
+  if(!api_key)
+    reporter.warn(`gatsby-source-publitio api_key required`)
+
+  if(!api_secret)
+    reporter.warn(`gatsby-source-publitio api_secret required`)
+
   const publitio = new PublitioAPI(api_key, api_secret);
 
   const data = await publitio.call("/files/list", "GET", options);
 
-  if (data.files) {
-    data.files.forEach(async file => {
+  if(!data.success)
+    reporter.error(`gatsby-source-publitio ${data.error.message}`)
+  else if (data.files) {
+    for (const file of data.files) {
       const nodeId = createNodeId(`publitio-file-${file.id}`);
 
       const fileNode = await createRemoteFileNode({
@@ -49,7 +57,7 @@ exports.sourceNodes = async (
           contentDigest: createContentDigest(file)
         }
       });
-    });
+    }
   }
 
   return;
